@@ -8,15 +8,13 @@
 - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)  
 - [Question and Solution](#question-and-solution)  
 
-Please note that all the information regarding this case study has been sourced from the following link: https://8weeksqlchallenge.com/case-study-1/
+Please note that all the information regarding this case study has been sourced from the following link: [here](https://8weeksqlchallenge.com/case-study-1/)
 
 ---
 
 ## Business Task
 
-Danny wants to use the data to answer questions about his customers, including their visiting patterns, spending habits, and favourite menu items. These insights will help him offer a more personalised experience and decide whether to expand the customer loyalty program.
-
-Due to privacy, Danny provided a sample of his overall customer data. Your task is to write SQL queries based on three key datasets: `sales`, `menu`, and `members`, to answer his questions and generate easy-to-inspect datasets for his team.
+In this case study, I'm helping Danny analyze customer data to understand their visit patterns, spending habits, and favorite menu items. I’ll use SQL to answer his business questions using the `sales`, `menu`, and `members` datasets.
 
 ---
 
