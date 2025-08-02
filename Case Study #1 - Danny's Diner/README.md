@@ -33,7 +33,6 @@ I’ve solved the following question on [DB Fiddle](https://www.db-fiddle.com/f/
 ---
 
 **1. What is the total amount each customer spent at the restaurant?**
-
 ```sql
 SELECT 
   sales.customer_id, 
@@ -53,7 +52,6 @@ ORDER BY sales.customer_id ASC;
 | C            | 36           |
 
 **2. How many days has each customer visited the restaurant?**
-
 ```sql
 SELECT 
   customer_id, 
@@ -68,4 +66,7 @@ GROUP BY customer_id;
 | A           | 4           |
 | B           | 6           |
 | C           | 2           |
+
+**3. What was the first item from the menu purchased by each customer?**
+```sql
 
