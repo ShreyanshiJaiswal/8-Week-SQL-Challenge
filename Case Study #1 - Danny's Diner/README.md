@@ -34,8 +34,6 @@ I’ve solved the following question on [DB Fiddle](https://www.db-fiddle.com/f/
 
 **1. What is the total amount each customer spent at the restaurant?**
 
-**SQL Query:**
-
 ```sql
 SELECT 
   sales.customer_id, 
@@ -46,7 +44,6 @@ INNER JOIN dannys_diner.menu
 GROUP BY sales.customer_id
 ORDER BY sales.customer_id ASC;
 ```
-
 **Output:**
 
 | customer\_id | total\_sales |
@@ -55,4 +52,20 @@ ORDER BY sales.customer_id ASC;
 | B            | 74           |
 | C            | 36           |
 
+**2. How many days has each customer visited the restaurant?**
+
+```sql
+SELECT 
+  customer_id, 
+  COUNT(DISTINCT order_date) AS visit_count
+FROM dannys_diner.sales
+GROUP BY customer_id;
+```
+**Output:**
+
+| customer_id | visit_count |
+|-------------|-------------|
+| A           | 4           |
+| B           | 6           |
+| C           | 2           |
 
