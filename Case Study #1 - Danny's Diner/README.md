@@ -32,9 +32,7 @@ I’ve solved the following question on [DB Fiddle](https://www.db-fiddle.com/f/
 
 ---
 
-### 1
-
-**What is the total amount each customer spent at the restaurant?**
+### 1 **What is the total amount each customer spent at the restaurant?**
 
 **SQL Query:**
 
@@ -47,16 +45,6 @@ INNER JOIN dannys_diner.menu
   ON sales.product_id = menu.product_id
 GROUP BY sales.customer_id
 ORDER BY sales.customer_id ASC;
+ 
 
-**Schema (PostgreSQL v13)**
-
-| customer_id | total_sales |
-| ----------- | ----------- |
-| A           | 76          |
-| B           | 74          |
-| C           | 36          |
-
----
-
-[View on DB Fiddle](https://www.db-fiddle.com/f/2rM8RAnq7h5LLDTzZiRWcd/138)
 
