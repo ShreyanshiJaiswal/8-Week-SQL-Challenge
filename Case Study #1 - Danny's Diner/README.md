@@ -69,4 +69,24 @@ GROUP BY customer_id;
 
 **3. What was the first item from the menu purchased by each customer?**
 ```sql
-
+SELECT 
+  s.customer_id, 
+  s.order_date, 
+  m.product_name
+FROM dannys_diner.sales AS s
+JOIN dannys_diner.menu AS m 
+  ON s.product_id = m.product_id
+WHERE s.order_date = (
+  SELECT MIN(order_date)
+  FROM dannys_diner.sales AS inner_s
+  WHERE inner_s.customer_id = s.customer_id
+)
+ORDER BY s.customer_id;
+```
+**Output:**
+| customer_id | order_date | product_name |
+|-------------|------------|--------------|
+| A           | 2021-01-01 | sushi        |
+| A           | 2021-01-01 | curry        |
+| B           | 2021-01-01 | curry        |
+| C           | 2021-01-01 | ramen        |
