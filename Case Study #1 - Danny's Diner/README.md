@@ -106,3 +106,34 @@ LIMIT 1;
 |--------------|-----------|
 | ramen        | 8         |
 
+**5. Which item was the most popular for each customer?**
+```sql
+WITH ranked_orders AS (
+  SELECT 
+    s.customer_id,
+    m.product_name,
+    COUNT(*) AS order_count,
+    RANK() OVER (
+      PARTITION BY s.customer_id 
+      ORDER BY COUNT(*) DESC
+    ) AS rank
+  FROM sales s
+  JOIN menu m ON s.product_id = m.product_id
+  GROUP BY s.customer_id, m.product_name
+)
+
+SELECT customer_id, product_name, order_count
+FROM ranked_orders
+WHERE rank = 1;
+```
+**Output:**
+| customer\_id | product\_name | order\_count |
+| ------------ | ------------- | ------------ |
+| A            | Curry         | 2            |
+| B            | Sushi         | 2            |
+| C            | Ramen         | 3            |
+
+**6. Which item was purchased first by the customer after they became a member?**
+```sql
+
+```
