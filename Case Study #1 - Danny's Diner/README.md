@@ -44,7 +44,6 @@ GROUP BY sales.customer_id
 ORDER BY sales.customer_id ASC;
 ```
 **Output:**
-
 | customer\_id | total\_sales |
 | ------------ | ------------ |
 | A            | 76           |
@@ -60,7 +59,6 @@ FROM dannys_diner.sales
 GROUP BY customer_id;
 ```
 **Output:**
-
 | customer_id | visit_count |
 |-------------|-------------|
 | A           | 4           |
@@ -90,3 +88,21 @@ ORDER BY s.customer_id;
 | A           | 2021-01-01 | curry        |
 | B           | 2021-01-01 | curry        |
 | C           | 2021-01-01 | ramen        |
+
+**4. Find the most purchased item on the menu and how many times it was purchased?**
+```sql
+SELECT 
+  menu.product_name, 
+  COUNT(*) AS frequency
+FROM dannys_diner.sales
+JOIN dannys_diner.menu 
+  ON sales.product_id = menu.product_id
+GROUP BY menu.product_name
+ORDER BY frequency DESC
+LIMIT 1;
+```
+**Output:**
+| product_name | frequency |
+|--------------|-----------|
+| ramen        | 8         |
+
