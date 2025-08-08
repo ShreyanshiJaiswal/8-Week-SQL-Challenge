@@ -16,7 +16,7 @@ Please note that all the information regarding this case study has been sourced 
 
 ## Business Task
 
-In this case study, I'm helping Danny analyze customer data to understand their visit patterns, spending habits, and favorite menu items. I’ll use SQL to answer his business questions using the `runners`, `customer_orders`, `runner_orders`, `pizza_names`, `pizza_recipes`, `pizza_toppings` and `members` tables from the `pizza_runner` database schema.
+This case study focuses on helping Danny improve operations for his startup, Pizza Runner. Using data from the pizza_runner schema, the goal is to clean the raw datasets and perform basic analysis to support better decision-making around deliveries and orders. The tables involved in this case study include: runners, customer_orders, runner_orders, pizza_names, pizza_recipes, pizza_toppings, and members. All SQL queries should reference the pizza_runner schema.
 
 ---
 
@@ -31,3 +31,8 @@ In this case study, I'm helping Danny analyze customer data to understand their 
 I’ve solved the following question on [DB Fiddle](https://www.db-fiddle.com/f/7VcQKQwsS3CTkGRFG7vu98/65) 💻
 
 ---
+
+**A. Pizza Metrics**
+**How many pizzas were ordered?**
+```sql
+```
