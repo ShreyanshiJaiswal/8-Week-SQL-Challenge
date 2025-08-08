@@ -32,8 +32,8 @@ I’ve solved the following question on [DB Fiddle](https://www.db-fiddle.com/f/
 
 ---
 
-**A. Pizza Metrics**
+## A. Pizza Metrics
 
-**How many pizzas were ordered?**
+**1. How many pizzas were ordered?**
 ```sql
 ```
