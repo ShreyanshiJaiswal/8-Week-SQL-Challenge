@@ -8,7 +8,12 @@
 
 - [Business Task](#business-task)  
 - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)  
-- [Question and Solution](#question-and-solution)  
+- [Solution](#solution)  
+  - [Data Cleaning & Transformation](#data-cleaning--transformation)  
+  - [Pizza Metrics](#pizza-metrics)  
+  - [Runner and Customer Experience](#runner-and-customer-experience)  
+  - [Ingredient Optimisation](#ingredient-optimisation)  
+  - [Pricing and Ratings](#pricing-and-ratings)
 
 Please note that all the information regarding this case study has been sourced from the following link: [here](https://8weeksqlchallenge.com/case-study-2/)
 
@@ -52,8 +57,8 @@ Looking at the **customer_orders** table, we can see there are:
 | 10       | 104         | 1        | 2, 6       | 1, 4   | 2020-01-11 18:34:49 |
 
 **Our work now:**  
-Replace all `NULL`, `'null'`, or blank entries in `exclusions` and `extras` columns with a blank space `' '`.  
-Create a temporary table with all the columns using this cleaned data.
+- Replace all `NULL`, `'null'`, or blank entries in `exclusions` and `extras` columns with a blank space `' '`.  
+- Create a temporary table with all the columns using this cleaned data.
 ```sql
 CREATE TEMP TABLE customer_orders_temp AS
 SELECT 
@@ -72,13 +77,12 @@ SELECT
 FROM pizza_runner.customer_orders;
 ```
 This is how the clean customer_orders_temp table looks like and we will use this table to run all our queries.
+
 ![customer_orders_temp](https://github.com/ShreyanshiJaiswal/8-Week-SQL-Challenge/blob/main/.images/Case_Study%232_customer_orders_tem_table.png)
 
 ---
 
-## Question and Solution
-
-I’ve solved the following question on [DB Fiddle](https://www.db-fiddle.com/f/7VcQKQwsS3CTkGRFG7vu98/65) 💻
+## Solution
 
 ---
 
