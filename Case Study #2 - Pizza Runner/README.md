@@ -8,7 +8,7 @@
 
 - [Business Task](#business-task)  
 - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)  
-- [Solution](#solution)  
+- [Solution]  
   - [Data Cleaning & Transformation](#data-cleaning--transformation)  
   - [Pizza Metrics](#pizza-metrics)  
   - [Runner and Customer Experience](#runner-and-customer-experience)  
